@@ -9,6 +9,7 @@
 body{
     display: flex;
     flex-direction: column;
+    /* background-color: #f9fafb !important; */
 }
 
 main{
@@ -119,6 +120,25 @@ main{
     width: 160px;
     height: 160px;
     margin: 0 auto;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background-image: url("../images/home/logo_transparent.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255);
+    margin-bottom: 10px;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+}
+
+.left-navigation.collapse .logo{
+    opacity: 0;
 }
 
 .left-navigation .nav-item{
@@ -262,10 +282,10 @@ main{
     height: 60px;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
     display: flex;
     text-align: center;
     align-items: center;
@@ -432,7 +452,107 @@ main{
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-content
+.input-field{
+    width: 200px;
+    height: 36px;
+    margin: 0;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+.input-field .text-input{
+    width: 200px;
+    height: 36px;
+    outline: none;
+    border-style: solid;
+    border-radius: 6px;
+    padding-left: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 16px;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    box-shadow: 0px 0px 1px rgba(155, 155, 155, 0.2);
+    border-width: 1px;
+}
+
+.input-field .text-input:focus{
+    border-color: rgb(95, 196, 230);
+    box-shadow: 1px 1px 6px rgba(173, 216, 230, 0.5);
+}
+
+.input-field .text-input-title{
+    width: fit-content;
+    pointer-events: none;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    padding-left: 8px;
+    transition: all ease 0.3s;
+    background-color: transparent;
+    z-index: 99;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+}
+
+.input-field .text-input:hover,
+.input-field .text-input:valid{
+    border-color: rgb(117, 191, 215);
+    box-shadow: 1px 1px 6px rgba(173, 216, 230, 0.5);
+}
+.input-field .text-input:valid:hover ~ .text-input-title{
+    background-color: rgb(95, 196, 230);
+}
+
+.input-field .text-input:focus ~ .text-input-title,
+.input-field input:valid:focus ~ .text-input-title{
+    font-size: 12px;
+    font-weight: bold;
+    transform: translateX(14px) translateY(-6px);
+    -webkit-transform: translateX(14px) translateY(-6px);
+    -moz-transform: translateX(14px) translateY(-6px);
+    -ms-transform: translateX(14px) translateY(-6px);
+    -o-transform: translateX(14px) translateY(-6px);
+    background-color: rgb(95, 196, 230);
+    color: white;
+    line-height: normal;
+    padding: 1px 2px;
+}
+
+.input-field input:valid:not(:focus) ~ .text-input-title{
+    font-size: 12px;
+    font-weight: bold;
+    transform: translateX(14px) translateY(-6px);
+    -webkit-transform: translateX(14px) translateY(-6px);
+    -moz-transform: translateX(14px) translateY(-6px);
+    -ms-transform: translateX(14px) translateY(-6px);
+    -o-transform: translateX(14px) translateY(-6px);
+    background-color: rgb(95, 196, 230);
+    color: white;
+    line-height: normal;
+    padding: 1px 2px;
+}
+
 
 
 /* #### Mobile Phones Portrait #### */
@@ -521,6 +641,18 @@ content
     .content-reponsive{
         display: block;
         order: 2;
+    }
+    .nav-opener{
+        display: none;
+    }
+    .search-txt-box{
+        margin-left: 0;
+}
+}
+
+@media screen and (max-width: 540px){
+    .search-txt-box{
+        max-width: 160px;
     }
 }
   

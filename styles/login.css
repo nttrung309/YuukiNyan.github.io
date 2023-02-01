@@ -89,7 +89,7 @@ main{
     border-color: rgba(0, 0, 0, 0.5);
 }
 
-.roundedInput:focus{
+.roundedInput:focus{ 
     border-color: #4398e8;
 }
 .inputField{
